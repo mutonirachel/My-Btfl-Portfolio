@@ -296,11 +296,11 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
-@media only screen and (max-width: 600px){
+/* @media only screen and (max-width: 600px){
     #header{
         height: 82vh;
         /* background-image: url(/Images/myImage.png); */
-    }
+    /* }
     .header-photo img{
         width: 100%;
         height: 25vh;
@@ -369,5 +369,22 @@ nav .fa-solid{
         flex-basis: 100%;
     }.social-media-icons a{
         font-size: 20px;
+    }
+} */ 
+@media screen and (max-width: 600px){
+    .header-text p{
+        font-size: 18px;
+    }
+    .header-text h1{
+        font-size: 28px;
+    }
+    .photo img{
+        height: 25vh;
+        width: 100%;
+    }
+    .about-col-1 img{
+        height: 60vh;
+        width: 75vw;
+        /* margin-left: 80px; */
     }
 }
