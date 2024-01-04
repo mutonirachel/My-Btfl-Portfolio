@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Person Portfolio</title>
-    <link rel="stylesheet" href="/Styles/style.css">
+    <title>My Person Website</title>
+    <link rel="stylesheet" href="/Pages/style.css">
+    <script src="https://unpkg.com/typed.js@2.1/dist/typed.umd.js"></script>
     <script src="https://kit.fontawesome.com/0db17a8262.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <!-- Header section Starts -->
 
     <div id="header">
        <div class="container">
-
         <!-- My Nav Bar-->
-
         <nav>
             <img src="/Images/logo.jpg" alt="Logo Image" class="logo">
             <ul id="sidemenu">
@@ -29,13 +27,15 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-photo">
+            <div class="text-img">
             <div class="header-text">
+                <h1>Hi, I'm <span class="">Rachel</span><br> Mutoni</h1>
                 <p>Designer & Developer</p>
-                <h1>Hi, I'm <span>Rachel</span><br> Mutoni</i></h1>
             </div>
             <div class="photo">
                 <img src="/Images/myImage.png" alt="My Image">
             </div>
+        </div>
     </div>
        </div> 
     </div>
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="/Images/myImage.png" alt="My Image">
+                    <img src="/Images/aboutpage.png" alt="My Image">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-tittle">About Me</h1>
@@ -62,7 +62,7 @@
                        <div class="tab-contents active-tab" id="skills">
                         <ul>
                         <li><span>UI/UX Design</span><br>Web Designs using Figma and Designing tools</li>
-                        <li><span>Front-Developer</span><br>Using Reactjs and also HTML, CSS and JavaScript</li>
+                        <li><span>Front-Development</span><br>Using Reactjs and also HTML, CSS and JavaScript</li>
                         <li><span>Tek Skils</span><br>Like Git/GitHub, M365, Typing etc</li>
                         <li><span>Soft Skills</span><br>Communication, Team Work, Time Management, Hard Work, Organized etc</li>
                         </ul>
@@ -72,7 +72,7 @@
                         <li><span>2023 - Current</span><br>Facilitator and Front-end Developer At Ida Technology</li>
                         <li><span>2023 - Current</span><br>Trainee At SheCanCode (Igire Rwanda Organization) basically in Reactjs and Web Design</li>
                         <li><span>2022 - 2023</span><br>Trainee At Solvit Africa in Front-end Development basically in Reactjs</li>
-                        <li><span>2022</span><br>Trainee At Ida Technology in Software Development basically in Reactjs, JavaScript, Python, PHP, Web Design etc</li>
+                        <li><span>2022</span><br>Trainee At Ida Technology in Software Development basically in Reactjs, JavaScript, Python, PHP, Web Design</li>
                         </ul>
                        </div>
                        <div class="tab-contents" id="education">
@@ -80,7 +80,6 @@
                         <li><span>2019 - 2022</span><br>University of Kigali in Information Technology</li>
                         <li><span>2016 - 2018</span><br>Nyanza Technical School in Electronics and Telecommunication</li>
                         <li><span>2013 - 2015</span><br>Maryhill Girls Secondary School</li>
-                        <li><span>2007 - 2012</span><br>BTS (Busaza Primary School)</li>
                         </ul>
                        </div>
                 </div>
@@ -143,12 +142,9 @@
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <h1 class="sub-tittle">Contact Me</h1>
-                        <label for="">Your Names</label>
-                        <input type="text" name="Name"required>
-                        <label for="">Your Email</label>
-                        <input type="email" name="Email" required>
-                        <label for="">Your Message</label>
-                        <textarea name="Message" id="" cols="30" rows="6"></textarea>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" id="" cols="30" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn-2">Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -158,6 +154,18 @@
     </div>
 
     <!-- JavaScript -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var typed = new Typed(".text", {
+                strings: ["Rachel", "Mutoni"],
+                typeSpeed: 100,
+                backSpeed: 200,
+                backDelay: 2000,
+                loop: true
+            });
+        });
+    </script>
 
     <script>
 
@@ -189,7 +197,7 @@
     </script>
 
     <!--  -->
-    
+
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwMODTigdNslPM-dtJJTaWAjLpnMk-FStzI_vxAW5ptoY4NtMjjhD2XCO_G75PntF23PA/exec'
         const form = document.forms['submit-to-google-sheet']
